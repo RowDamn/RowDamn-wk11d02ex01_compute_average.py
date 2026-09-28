@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgorithm fileversion="2.18">
+  <attributes>
+    <attribute name="name" value="computeAverage"/>
+    <attribute name="authors" value=""/>
+    <attribute name="about" value="Week 11 Day 02 Compute Average"/>
+    <attribute name="saved" value="2026-09-27 19:40:00"/>
+    <attribute name="created" value="2026-09-27 19:40:00"/>
+    <attribute name="edited" value="2026-09-27 19:40:00"/>
+    <attribute name="description" value="Original computeAverage logic with early return"/>
+    <attribute name="language" value="English"/>
+    <attribute name="globalcomments" value=""/>
+  </attributes>
+  <function name="Main" type="None" variable="" parameters="">
+    <body>
+      <declare name="total" type="Real" array="False" size=""/>
+      <declare name="count" type="Integer" array="False" size=""/>
+      <declare name="num" type="Real" array="False" size=""/>
+      <declare name="average" type="Real" array="False" size=""/>
+      <assign variable="total" expression="0"/>
+      <assign variable="count" expression="0"/>
+      <input variable="num" prompt="Enter a number (nonzero returns immediately): "/>
+      <if expression="num = 0">
+        <then>
+          <output expression="&quot;Zero skipped; no average returned in this single-input demonstration.&quot;" newline="True"/>
+        </then>
+        <else>
+          <assign variable="total" expression="total + num"/>
+          <assign variable="count" expression="count + 1"/>
+          <assign variable="average" expression="total / count"/>
+          <output expression="average" newline="True"/>
+          <return expression=""/>
+        </else>
+      </if>
+    </body>
+  </function>
+</flowgorithm>
